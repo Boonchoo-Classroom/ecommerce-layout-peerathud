@@ -1,14 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeFragment">
+    android:fillViewport="true">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Fragement" />
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
-</FrameLayout>
+        <!-- แบนเนอร์ -->
+
+        <!-- หัวข้อสินค้าแนะนำ -->
+
+        <ImageView
+            android:id="@+id/bannerImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="60dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recommendedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎯 สินค้าแนะนำ"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/bannerImage"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- สินค้าแนะนำ 1 -->
+        <ImageView
+            android:id="@+id/recommendedImage1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_shirt1"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/recommendedTitle"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/recommendedText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📌 สินค้าเเนะนำ1 -50%"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/recommendedImage1"
+            app:layout_constraintStart_toStartOf="@id/recommendedImage1"/>
+
+        <!-- สินค้าแนะนำ 2 -->
+
+        <ImageView
+            android:id="@+id/recommendedImage2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_shirt2"
+            app:layout_constraintStart_toEndOf="@id/recommendedImage1"
+            app:layout_constraintTop_toBottomOf="@id/recommendedTitle" />
+
+        <TextView
+            android:id="@+id/recommendedText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📌 สินค้าเเนะนำ2 - ฿120"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/recommendedImage2"
+            app:layout_constraintStart_toStartOf="@id/recommendedImage2"/>
+
+        <!-- หัวข้อโปรโมชั่น -->
+        <TextView
+            android:id="@+id/promotionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥 โปรโมชั่นพิเศษ"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/recommendedText1"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- โปรโมชั่น 1 -->
+
+        <ImageView
+            android:id="@+id/promotionImage1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="56dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_promotion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/promotionTitle" />
+
+        <TextView
+            android:id="@+id/promotionText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/promotionImage1" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="648dp"
+            android:text="หน้าหลัก"
+            app:layout_constraintBottom_toBottomOf="@+id/promotionImage1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -9,7 +9,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ตะกร้าสินค้า"
+        android:text="เสื้อผ้า"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,7 +68,7 @@
                 android:text="shirt1"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@id/removeFavorite"
+
                 app:layout_constraintStart_toEndOf="@id/productImage"
                 app:layout_constraintTop_toTopOf="@id/productImage" />
 
@@ -84,18 +84,8 @@
                 app:layout_constraintStart_toStartOf="@id/productName"
                 app:layout_constraintTop_toBottomOf="@id/productName" />
 
-            <!-- Remove from Favorites Button -->
-            <ImageView
-                android:id="@+id/removeFavorite"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="8dp"
-                android:contentDescription="Remove from Favorites"
-                android:padding="8dp"
-                android:src="@drawable/ic_cancel"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -151,7 +141,7 @@
                 android:text="shirt2"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@id/removeFavorite1"
+
                 app:layout_constraintStart_toEndOf="@id/productImage1"
                 app:layout_constraintTop_toTopOf="@id/productImage1" />
 
@@ -167,35 +157,12 @@
                 app:layout_constraintStart_toStartOf="@id/productName1"
                 app:layout_constraintTop_toBottomOf="@id/productName1" />
 
-            <!-- Remove from Favorites Button -->
-            <ImageView
-                android:id="@+id/removeFavorite1"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="8dp"
-                android:contentDescription="Remove from Favorites"
-                android:padding="8dp"
-                android:src="@drawable/ic_cancel"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </com.google.android.material.card.MaterialCardView>
 
-    <Button
-        android:id="@+id/checkout_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="ชำระเงิน"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925" />
 </androidx.constraintlayout.widget.ConstraintLayout>
